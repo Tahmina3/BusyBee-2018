@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<style>
+
+</style>
+</head>
+<div style="width:100%;height:800px;line-height:3em;overflow:scroll;">
+<body class="body">
+
+<header>
+<a href="index.html">
+  <img src="busybee_logo2.jpg" width="250" height="150"</img> <a/>
+</header>
+  
+<div class="topnav">
+<a class="active"href="index.html"> Home   </a>
+<a href="ourservices.html"> Our services   </a>
+<a href="gallery.html"> Gallery   </a> 
+<a href="contactus.html"> Contact us   </a>
+</div>
+<br>
+
+<h1>Our gallery</h1>
+ <img class="mySlides" src="gallery1.jpg" style="width:60%"; "height:30%"; "align:middle">
+  <img class="mySlides" src="gallery3.jpg" style="width:60%"; "height:30%"; "align:middle">
+  <img class="mySlides" src="gallery4.jpg" style="width:60%"; "height:30%"; "align:middle">
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);    
+}
+</script>
+
+
+<br><br>
+<p><mark>Click on the images below to view and look our fantastic work...</mark></p>
+<br>
+
+<img id="myImg" src="blossom.jpg" alt="Image" width="300" height="200"/>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+   <!--
+      // The image will enlarge after clicking
+   
+      /*
+      * The image will enlarge after clicking
+      * The image will enlarge after clicking
+      */
+   //-->
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+
+
+
+
+
+
+
+
+<br><br><br>
+<br><br>
+<footer> 
+<p> Copyright &copy; BusyBee Gardening and Maintenace Services 2017-2018. All Rights Reserved. </p>
+</footer>
+
+</div>
+
+</body>
+</html>

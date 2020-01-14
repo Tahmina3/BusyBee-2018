@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+<style type="text/css">
+ p {
+    font-size:20px;
+    color: #000000; 
+   }
+</style>
+
+</head>
+
+<div style="width:100%;height:800px;line-height:3em;overflow:scroll;">
+
+<body class="body">
+
+<header>
+<a href="index.html">
+  <img src="busybee_logo2.jpg" width="250" height="150"</img> <a/>
+</header>
+
+
+<div class="topnav">
+<a class="active"href="index.html"> Home   </a>
+<a href="ourservices.html"> Our services   </a>
+<a href="gallery.html"> Gallery   </a> 
+<a href="contactus.html"> Contact us   </a>
+</div>
+<br> 
+
+<h1> Contact us</h1>
+<div  class="margi">
+
+<p> <mark> Tel: </mark>   01234 678900 </p>
+<p><mark> Email:  </mark><a href="mailto:customerservice@busybee.co.uk">   customerservice@busybee.co.uk</a></p>
+<p><mark> Find us at: </mark>  Busy Road, Kettering, Northamptonshire, NN16 6NJ </p>
+<p><mark> Contact us Form:  </mark>   
+    <button onclick="document.getElementById('id01').style.display='block'" class="button black"> Click Here </button>
+</p>
+
+  <div id="id01" class="modal">
+    <div class="modal-content animate-top card0">
+      <header class="teal hover-teal"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="button display-topright">&times;</span>
+
+
+<h1> Contact us Form</h1>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name*</label>
+    <input type="text" id="fname" name="firstname" placeholder="Insert your first name..." required>
+
+    <label for="lname">Last Name*</label>
+    <input type="text" id="lname" name="lastname" placeholder="Insert your last name..." required>
+
+    <label for="nenquiry">Nature of enquiry* </label>
+    <select id="nenquiry" name="Nature of enquiry">
+      <option value="so" selected>Select option</option>
+      <option value="p">Prices</option>
+      <option value="m">Maintenance</option>
+      <option value="d">Delivery</option>
+     <option value="o">Other</option>
+    </select>
+
+    <label for="mes">Message*</label>
+    <textarea id="message" name="subject" placeholder="Type your message..." style="height:100px" required></textarea>
+
+    <input type="submit" value="Submit">
+  </form>  <br><br><br><br>
+</div>
+
+
+    </div>
+  </div>
+
+<p>&nbsp;</p>
+<div>
+<p style="font-size:28px";> We are here </p>
+  <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+</div>
+<div style='overflow:hidden;height:440px;width:700px;'><div id='gmap_canvas' style='height:440px;width:700px;'></div><div>
+  <div align="center"><small><a href="http://embedgooglemaps.com">									embed google maps							</a></small></div>
+</div>
+  <div>
+    <div align="center"><small><a href="http://www.autohuren.world/">auto huren</a></small></div>
+  </div>
+  <div align="center">
+    <style>
+    #gmap_canvas img{max-width:none!important;background:none!important}
+    </style>
+  </div>
+</div>
+<div align="center"> </div>
+
+<script type='text/javascript'>
+function init_map(){var myOptions = {zoom:13,center:new google.maps.LatLng(52.3885627,-0.7130518,1156),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(52.3885627,-0.7130518,1156)});infowindow = new google.maps.InfoWindow({content:'<strong> Tresham College </strong><br>NN15 6NJ<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+</script>
+
+</div>
+
+
+<br><br><br><br>
+<footer><p> Copyright &copy; BusyBee Gardening and Maintenace Services 2017-2018. All Rights Reserved. </p>  </footer>
+
+
+</body>
+</html>
